@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './components/Navbar';
 import CodeDisplay from './components/CodeDisplay';
 import ProjectList from './components/ProjectList';
+import TextEditor from "./components/TextEditor";
 
 function App() {
   const sampleCode = `
@@ -69,7 +70,18 @@ function App() {
         language="javascript"
         />
         <br />
+        
         <ProjectList projects={projects} />
+        <br />
+        <div className="p-6 bg-shgreen text-white rounded-lg shadow-lg max-w-screen-lg mx-auto ">
+          <div className="min-h-screen text-white flex flex-col items-center p-8 ">
+            <h1 className="text-4xl font-bold mb-8 text-center ">CUM Lang API DEMO</h1>
+            <div className="w-full max-w-4xl">
+              {/* TextEditor component */}
+              <TextEditor />
+            </div>
+          </div>  
+        </div>
         <br />
       </div>
     </>

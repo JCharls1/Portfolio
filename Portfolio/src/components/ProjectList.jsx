@@ -3,13 +3,13 @@ import React from 'react';
 
 const ProjectList = ({ projects }) => {
   return (
-    <div className="p-6 bg-shgreen text-white rounded-lg shadow-lg max-w-screen-lg mx-auto">
+    <div className="p-6 bg-shgreen text-white rounded-lg shadow-lg max-w-screen-lg mx-auto ">
       <h2 className="text-3xl font-bold mb-6 text-center">My Projects</h2>
       <div className="space-y-4">
         {projects.map((project, index) => (
           <div key={index} className="p-4 bg-cream rounded-lg shadow-md border border-gray-700">
             <h3 className="text-2xl font-semibold text-customGray">{project.title}</h3>
-            <p className="mt-2 text-gray-300 text-customGray">{project.description}</p>
+            <p className="mt-2 text-gray-300 text-shgreen">{project.description}</p>
             <div className="mt-4 space-x-4">
               {project.github && (
                 <a
